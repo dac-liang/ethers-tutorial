@@ -1,4 +1,6 @@
-const HistoryPage = () => {
+import type { NextPage } from 'next';
+
+const HistoryPage: NextPage = () => {
   return (
     <div>
       <a href="/">History</a>

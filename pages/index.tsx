@@ -1,6 +1,7 @@
+import type { NextPage } from 'next';
 import AuthButton from '../components/AuthButton';
 
-const App = () => {
+const App: NextPage = () => {
   return (
     <div className="App">
       <a href="/">TOP</a>
