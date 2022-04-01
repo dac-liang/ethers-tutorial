@@ -2,17 +2,18 @@ import 'dotenv/config';
 import { ethers, utils } from 'ethers';
 
 (async () => {
-  const connection = new ethers.providers.JsonRpcProvider(
-    'http://localhost:8545'
-  );
+  // const connection = new ethers.providers.JsonRpcProvider(
+  //   'http://localhost:8545'
+  // );
+  const connection = ethers.getDefaultProvider('rinkeby');
   const gasPrice = connection.getGasPrice();
   const senderKey: string = process.env.SENDER_PRIVATE_KEY || '';
   const sender = new ethers.Wallet(senderKey);
   const signer = sender.connect(connection);
 
   // env で指定したアドレスまたは Random に作成
-  // const recipient = { address: process.env.RECIPIENT_ADDRESS || '' };
-  const recipient = ethers.Wallet.createRandom();
+  const recipient = { address: process.env.RECIPIENT_ADDRESS || '' };
+  // const recipient = ethers.Wallet.createRandom();
   const tx = {
     from: sender.address,
     to: recipient.address,
