@@ -1,0 +1,17 @@
+{
+  "name": "ethers-tutorial",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "send": "ts-node index"
+  },
+  "author": "yunghsin-liang",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@types/node": "^17.0.23",
+    "dotenv": "^16.0.0",
+    "ethers": "^5.6.2",
+    "yarn": "^1.22.18"
+  }
+}
