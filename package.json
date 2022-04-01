@@ -1,17 +1,32 @@
 {
   "name": "ethers-tutorial",
   "version": "1.0.0",
-  "main": "index.ts",
   "scripts": {
-    "send": "ts-node index"
+    "send": "ts-node index",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "author": "yunghsin-liang",
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "@chakra-ui/icons": "^1.1.5",
+    "@chakra-ui/react": "^1.8.7",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "@fontsource/poppins": "^4.5.1",
+    "framer-motion": "^6",
+    "next": "^12.1.4",
+    "react": "^18.0.0-rc.3",
+    "react-dom": "^18.0.0-rc.3",
+    "yarn": "^1.22.18"
+  },
+  "devDependencies": {
     "@types/node": "^17.0.23",
+    "@types/react": "^17.0.43",
     "dotenv": "^16.0.0",
     "ethers": "^5.6.2",
-    "yarn": "^1.22.18"
+    "typescript": "^4.6.3"
   }
 }
