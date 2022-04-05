@@ -277,13 +277,13 @@ const NAV_ITEMS: Array<NavItem> = [
     label: '送信',
     children: [
       {
-        label: 'send ether',
-        subLabel: 'send ether',
-        href: '#',
+        label: 'ether を転送',
+        subLabel: 'ether を転送',
+        href: '/create-transaction',
       },
       {
-        label: 'mint NFT',
-        subLabel: 'mint NFT',
+        label: 'NFT 鋳造',
+        subLabel: 'NFT 鋳造',
         href: '#',
       },
     ],
