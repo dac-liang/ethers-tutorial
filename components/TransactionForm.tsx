@@ -21,6 +21,8 @@ const TransactionForm = () => {
   const [recipientAddr, setRecipientAddr] = React.useState('');
   const handleRecipientAddrChange = (event) =>
     setRecipientAddr(event.target.value);
+  const [sendValue, setSendValue] = React.useState('0.001');
+  const handleSendValueChange = (event) => setSendValue(event.target.value);
 
   return (
     <VStack spacing={{ base: 4, md: 8, lg: 20 }}>
@@ -45,8 +47,8 @@ const TransactionForm = () => {
           shadow="base"
         >
           <VStack spacing={5}>
-            <FormControl isRequired>
-              <FormLabel>Sender Name</FormLabel>
+            <FormControl>
+              <FormLabel>Sender Name (optional)</FormLabel>
 
               <InputGroup>
                 <InputLeftElement />
@@ -75,6 +77,21 @@ const TransactionForm = () => {
               </InputGroup>
             </FormControl>
 
+            <FormControl isRequired>
+              <FormLabel>Recipient Wallet Address</FormLabel>
+
+              <InputGroup>
+                <InputLeftElement />
+                <Input
+                  type="text"
+                  name="send-value"
+                  placeholder="send ether value"
+                  value={sendValue}
+                  onChange={handleSendValueChange}
+                />
+              </InputGroup>
+            </FormControl>
+
             <Button
               colorScheme="blue"
               bg="blue.400"
@@ -84,7 +101,7 @@ const TransactionForm = () => {
               }}
               isFullWidth
               onClick={() => {
-                SendTransaction(senderName, recipientAddr);
+                SendTransaction(senderName, recipientAddr, sendValue);
               }}
             >
               Submit
